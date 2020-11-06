@@ -1,0 +1,86 @@
+<section id="contact" class="container mt-5 pt-5 pb-5">
+    <h3>Contact</h3>
+    <div id="contactModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary"
+                        data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 rounded border bg-light p-3">
+                <p>Contacted <span id="count">0</span> times</p>
+                <div style="max-height: 500px;" id="contact-list" class="rounded overflow-auto">
+                </div>
+            </div>
+
+            <form onsubmit="contactForm(event)"
+                class="col col-sm-5 border border-black rounded-lg p-5 bg-light" method="POST"
+                enctype="multipart/form-data" autocomplete="on" style="width:50%; margin:auto">
+
+                <legend>Your Information</legend>
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email"
+                            placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">phone</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" id="phone" name="phone"
+                            placehold="###-###-####">
+                    </div>
+                </div>
+
+                <legend class="mt-4">Contact</legend>
+                <p>How can we contact you?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contact" value="email"
+                        checked>
+                    <label class="form-check-label" for="contact1">
+                        Email
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contact" value="phone">
+                    <label class="form-check-label" for="contact2">
+                        Phone
+                    </label>
+                </div>
+
+
+
+                <legend class="mt-4">Best time to contact you</legend>
+                <input class="form-control mb-3" type="datetime-local" name="datetime-local"
+                    id="contact_time">
+                <!--works with chrome not firefox-->
+
+
+                <input class="btn btn-outline-secondary" type="reset" value="Clear Data">
+                <input class="btn btn-outline-primary" type="submit">
+            </form>
+        </div>
+</section>
