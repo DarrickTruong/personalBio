@@ -92,7 +92,12 @@ remove = (e) => {
 }
 
 truncate = (e) => {
-    console.log(e.target);
+    // console.log(e);
     // e.target.classList.remove("text-truncate");
-    e.target.classList.remove("project-desc")
+    
+    if (e.target.className === "project-desc") {
+        e.target.classList.remove("project-desc")
+    } else {
+        e.target.classList.add("project-desc");
+    }
 }

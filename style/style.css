@@ -83,6 +83,11 @@ nav a {
     display: -webkit-box; 
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
+    transition: transform .3s;
+}
+
+.project-desc:hover {
+    transform: scale(1.02);
 }
 
 #hero .col {
